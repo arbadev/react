@@ -1,12 +1,7 @@
 import React from 'react'
 import { render } from 'react-dom'
+import App from './components/App'
+// { PageTemplate }
+// import { PageTemplate } from 'components'
 
-const Foo = (props, context) => {
-  // const {
-  //   location
-  // } = context.router;
-
-  return <div>Hi 2</div>
-}
-
-render(<Foo />, document.getElementById('root'))
+render(<App />, document.getElementById('root'))
