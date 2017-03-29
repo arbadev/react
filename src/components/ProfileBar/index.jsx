@@ -5,18 +5,20 @@ const ProfileBar = (props) => {
   return (
     <div className={styles.root}>
       <figure>
-        <img className={styles.avatar} src={props.picture} />
+        <img alt="Avatar" className={styles.avatar} src={props.picture} />
       </figure>
       <span className={styles.username}>Hi @{props.username}!</span>
       <button onClick={props.onOpenText} className={styles.button}>
-        <span className="fa fa-lg fa-edit"> </span> Tweet!
+        <span className="fa fa-lg fa-edit" /> Tweet!
       </button>
     </div>
   )
 }
 
 ProfileBar.propTypes = {
-  // messages: React.PropTypes.array
+  picture: React.PropTypes.string,
+  username: React.PropTypes.string,
+  onOpenText: React.PropTypes.func,
 }
 
 export default ProfileBar

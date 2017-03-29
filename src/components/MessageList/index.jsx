@@ -13,7 +13,7 @@ const MessageList = (props) => {
             text={msg.text}
             picture={msg.picture}
             displayName={msg.displayName}
-            userName={msg.userName}
+            username={msg.userName}
             date={msg.date}
           />
         )
@@ -23,7 +23,7 @@ const MessageList = (props) => {
 }
 
 MessageList.propTypes = {
-  messages: React.PropTypes.array
+  messages: React.PropTypes.array,
 }
 
 export default MessageList

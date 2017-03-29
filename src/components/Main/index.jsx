@@ -11,7 +11,7 @@ const messages = [
     text: 'Tengo mucho dinero',
     picture: 'http://icons.iconarchive.com/icons/mattahan/ultrabuuf/128/Comics-Ironman-Red-icon.png',
     displayName: 'Iron Man',
-    userName: 'Tony Stark',
+    username: 'Tony Stark',
     date: Date.now(),
   },
   {
@@ -19,7 +19,7 @@ const messages = [
     text: 'Soy dracula 2.0',
     picture: 'https://a.wattpad.com/useravatar/xxbatmanbabyxx.128.904685.jpg',
     displayName: 'Batman',
-    userName: 'Bruce Wayne',
+    username: 'Bruce Wayne',
     date: Date.now() - 240000,
   },
 ]
@@ -48,7 +48,7 @@ const Main = (props) => {
 }
 
 Main.propTypes = {
-  messages: React.PropTypes.array,
+  user: React.PropTypes.object,
 }
 
 export default Main

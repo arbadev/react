@@ -3,12 +3,14 @@ import 'normalize-css'
 
 import Header from '../Header'
 import Main from '../Main'
-import styles from './app.css'
+// import styles from './app.css'
 
-const App = (props, context) => {
-  // const {
-  //   location
-  // } = context.router;
+// const App = (props, context) => {
+//   // const {
+//   //   location
+//   // } = context.router;
+
+const App = () => {
   const user = {
     photoUrl: 'https://lh5.googleusercontent.com/-s9_Tt3cFDr0/AAAAAAAAAAI/AAAAAAAAABU/pokobD-s618/photo.jpg',
     email: 'a3barradas@gmail.com',
@@ -17,7 +19,7 @@ const App = (props, context) => {
   return (
     <div>
       <Header />
-      <Main user={user}/>
+      <Main user={user} />
     </div>
   )
 }

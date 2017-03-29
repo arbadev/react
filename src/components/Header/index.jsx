@@ -2,11 +2,7 @@ import React from 'react'
 
 import styles from './header.css'
 
-const Header = (props, context) => {
-  // const {
-  //   location
-  // } = context.router;
-
+const Header = () => {
   return (
     <div>
       <header className={styles.root}>
