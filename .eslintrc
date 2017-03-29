@@ -1,4 +1,4 @@
-,# {
+{
   "parser": "babel-eslint",
   "extends": [
     "airbnb"
@@ -12,7 +12,8 @@
     "__PROD__": true,
     "__DEBUG__": true,
     "__COVERAGE__": true,
-    "__BASENAME__": true
+    "__BASENAME__": true,
+    "console": true,
   },
   "settings": {
     "import/resolver": "webpack"
@@ -20,6 +21,7 @@
   "rules": {
     "semi": [2, "never"],
     "comma-dangle": [2, "always-multiline"],
+    "consistent-return": [0, { "treatUndefinedAsUnspecified": true }],
     "max-len": 0,
     "no-shadow": 0,
     "arrow-body-style": 0,
@@ -36,6 +38,6 @@
     "react/forbid-prop-types": 0,
     "react/no-unused-prop-types": 0,
     # "react/jsx-filename-extension": [2, {"extensions": [".js", ".jsx"]}],
-    "no-unused-vars-rest/no-unused-vars": [2, {"ignoreDestructuredVarsWithRest": true}],
+    "no-unused-vars-rest/no-unused-vars": [2, { "ignoreDestructuredVarsWithRest": true }],
   }
 }
