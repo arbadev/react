@@ -8,7 +8,7 @@ const ProfileBar = (props) => {
         <img className={styles.avatar} src={props.picture} />
       </figure>
       <span className={styles.username}>Hi @{props.username}!</span>
-      <button  onClick={props.onOpenText} className={styles.button}>
+      <button onClick={props.onOpenText} className={styles.button}>
         <span className="fa fa-lg fa-edit"> </span> Tweet!
       </button>
     </div>
