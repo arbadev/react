@@ -26721,8 +26721,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(11);
 
 var _react2 = _interopRequireDefault(_react);
@@ -26743,49 +26741,23 @@ var _Main2 = _interopRequireDefault(_Main);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var App = function App(props) {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(_Header2.default, null),
+    _react2.default.createElement(_Main2.default, { user: props.user })
+  );
+};
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var App = function (_Component) {
-  _inherits(App, _Component);
-
-  function App() {
-    _classCallCheck(this, App);
-
-    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
-
-    _this.state = {
-      user: {
-        photoUrl: 'https://lh5.googleusercontent.com/-s9_Tt3cFDr0/AAAAAAAAAAI/AAAAAAAAABU/pokobD-s618/photo.jpg',
-        email: 'a3barradas@gmail.com',
-        onOpenText: false
-      }
-    };
-    return _this;
-  }
-
-  _createClass(App, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(_Header2.default, null),
-        _react2.default.createElement(_Main2.default, { user: this.state.user })
-      );
-    }
-  }]);
-
-  return App;
-}(_react.Component);
-
-var mapStateToProps = function mapStateToProps() {
+var mapStateToProps = function mapStateToProps(state) {
   return {
-    user: undefined.state.user
+    user: state.user
   };
+};
+
+App.propTypes = {
+  user: _react2.default.PropTypes.object
 };
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps)(App);
@@ -26960,28 +26932,11 @@ var _uuid2 = _interopRequireDefault(_uuid);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function () {
-  return [{
-    id: _uuid2.default.v4(),
-    text: 'Tengo mucho dinero',
-    picture: 'http://icons.iconarchive.com/icons/mattahan/ultrabuuf/128/Comics-Ironman-Red-icon.png',
-    displayName: 'Iron Man',
-    username: 'Tony Stark',
-    date: Date.now()
-  }, {
-    id: _uuid2.default.v4(),
-    text: 'Soy dracula 2.0',
-    picture: 'https://a.wattpad.com/useravatar/xxbatmanbabyxx.128.904685.jpg',
-    displayName: 'Batman',
-    username: 'Bruce Wayne',
-    date: Date.now() - 240000
-  }, {
-    id: _uuid2.default.v4(),
-    text: 'Yo HULK yo GENTE!!',
-    picture: 'http://files.gamebanana.com/img/ico/sprays/hulk_9.png',
-    displayName: 'Hulk',
-    username: 'Robert Bruce Banner',
-    date: Date.now() - 360000
-  }];
+  return {
+    photoUrl: 'https://lh5.googleusercontent.com/-s9_Tt3cFDr0/AAAAAAAAAAI/AAAAAAAAABU/pokobD-s618/photo.jpg',
+    email: 'a3barradas@gmail.com',
+    onOpenText: false
+  };
 };
 
 /***/ }),
@@ -27010,7 +26965,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // console.log('users': UserReducers)
 
 exports.default = (0, _redux.combineReducers)({
-  users: _UserReducers2.default,
+  user: _UserReducers2.default,
   messages: _MessageReducer2.default
 });
 
