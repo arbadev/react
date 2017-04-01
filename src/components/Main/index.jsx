@@ -22,6 +22,14 @@ const messages = [
     username: 'Bruce Wayne',
     date: Date.now() - 240000,
   },
+  {
+    id: uuid.v4(),
+    text: 'Yo HULK yo GENTE!!',
+    picture: 'http://files.gamebanana.com/img/ico/sprays/hulk_9.png',
+    displayName: 'Hulk',
+    username: 'Robert Bruce Banner',
+    date: Date.now() - 360000,
+  },
 ]
 let openText = false
 
