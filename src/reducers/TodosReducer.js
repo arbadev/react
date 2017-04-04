@@ -1,8 +1,4 @@
-import { displayTweetInput } from '../actions'
-
-const initialState = {
-  openText: false,
-}
+import { ADD_TODO, TOGGLE_TODO } from '../actions'
 
 export default (state = [], action) => {
   switch (action.type) {

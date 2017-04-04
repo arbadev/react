@@ -18,6 +18,7 @@ const App = (props) => {
 const mapStateToProps = (state) => {
   return {
     user: state.user,
+    messages: state.messages,
   }
 }
 
